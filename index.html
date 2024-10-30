@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Country Explorer</h1>
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="favorites.html" id="favoritesLink">Favorites</a></li>
+                <li><a href="#about" id="aboutLink">About</a></li> <!-- Updated to use JS navigation -->
+                <li><a href="#contact" id="contactLink">Contact Us</a></li>
+            </ul>
+        </nav>
+        <input type="text" id="searchInput" placeholder="Search for a country...">
+        <div class="suggestions" id="suggestions"></div>
+    </header>
+
+    <main>
+        <div class="country-list" id="countryList"></div>
+    </main>
+
+    <button class="load-more" id="loadMore">Show More</button>
+
+    <div class="favorites" id="favorites">
+        <h2>Favorites</h2>
+        <div class="favorites-list" id="favoritesList"></div>
+    </div>
+
+    <!-- About section -->
+    <section id="aboutSection" style="display: none;">
+        <h1>About <span id="countryName"></span></h1>
+        <div id="aboutContent">
+            <!-- Country information will be displayed here -->
+        </div>
+        <button id="backToHome">Back to Home</button>
+    </section>
+
+    <!-- Contact us -->
+    <section id="contactSection" style="display: none; text-align: center;">
+        <h2>Contact Me</h2>
+        <p>If you have any questions, feel free to contact us!</p>
+        <form id="contactForm">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <a href="index.html" id="backToHomeFromContact" class="back-button">Back to Home</a>
+    </section>
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
